@@ -19,31 +19,32 @@ const CardDetail = () => {
         Object.keys(recipeInfo).length !== 0 && recipeInfo.image ? (
           <>
             <StyledNavLink to="/home">Volver</StyledNavLink>
-            <StyledDivDetail>
+            <StyledDivDetail tablet>
               <StyledDivContainer>
                 <h2>{!recipeInfo.name ? recipeInfo.title : recipeInfo.name}</h2>
                 <StyledImg
                   src={recipeInfo.image}
                   alt={`${!recipeInfo.name && recipeInfo.title}`}
                 />
-                <StyledPSubTitle>Id:</StyledPSubTitle>
-                <StyledPtext>{recipeInfo.id}</StyledPtext>
-                <StyledPSubTitle>Summary:</StyledPSubTitle>
+                <StyledPSubTitle tablet>Id:</StyledPSubTitle>
+                <StyledPtext tablet>{recipeInfo.id}</StyledPtext>
+                <StyledPSubTitle tablet>Summary:</StyledPSubTitle>
                 <StyledPtext
+                  tablet
                   dangerouslySetInnerHTML={{ __html: recipeInfo.summary }}
                 />
-                <StyledPSubTitle>Steps:</StyledPSubTitle>
-                <StyledPtext>
+                <StyledPSubTitle tablet>Steps:</StyledPSubTitle>
+                <StyledPtext tablet>
                   {recipeInfo.analyzedInstructions
                     ? recipeInfo.analyzedInstructions
                     : "-"}
                 </StyledPtext>
-                <StyledPSubTitle>Diets:</StyledPSubTitle>
-                <StyledPtext>
+                <StyledPSubTitle tablet>Diets:</StyledPSubTitle>
+                <StyledPtext tablet>
                   {recipeInfo.diets ? recipeInfo.diets : "-"}
                 </StyledPtext>
-                <StyledPSubTitle>Health score:</StyledPSubTitle>
-                <StyledPtext>{recipeInfo.healthScore}</StyledPtext>
+                <StyledPSubTitle tablet>Health score:</StyledPSubTitle>
+                <StyledPtext tablet>{recipeInfo.healthScore}</StyledPtext>
               </StyledDivContainer>
             </StyledDivDetail>
           </>

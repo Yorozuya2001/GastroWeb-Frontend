@@ -47,7 +47,7 @@ export const searchRecipes = (recipe) => {
   return async (dispatch) => {
     try {
       const response = await fetch(
-        `https://gastroweb-backend-production.up.railway.app/name?search=${recipe}`
+        `https://gastroweb-backend-production.up.railway.app/recipes/name?search=${recipe}`
       );
       const data = await response.json();
 

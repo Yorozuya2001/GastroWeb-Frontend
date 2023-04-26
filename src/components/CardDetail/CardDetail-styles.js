@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import vars from "../styledComponents-variables";
 import { NavLink } from "react-router-dom";
 export const StyledDivContainer = styled.div`
@@ -25,6 +25,21 @@ export const StyledDivDetail = styled.div`
     font-size: ${vars.text_size_principal};
     text-align: center;
   }
+
+  ${(props) =>
+    props.tablet &&
+    css`
+      @media (max-width: 768px) {
+        width: 90%;
+
+        h2 {
+          color: ${vars.color_3};
+          margin-bottom: 8px;
+          font-size: ${vars.text_size_principal_mobile};
+          text-align: center;
+        }
+      }
+    `}
 `;
 
 export const StyledImg = styled.img`
@@ -41,6 +56,16 @@ export const StyledPSubTitle = styled.p`
   font-size: ${vars.text_size_secondary};
   text-align: center;
   margin-bottom: 16px;
+
+  ${(props) =>
+    props.tablet &&
+    css`
+      @media (max-width: 768px) {
+        font-size: ${vars.text_size_seccion_mobile};
+        line-height: 1.5;
+        text-align: justify;
+      }
+    `}
 `;
 
 export const StyledPtext = styled.p`
@@ -48,6 +73,16 @@ export const StyledPtext = styled.p`
   font-size: ${vars.text_size_seccion};
   margin-bottom: 16px;
   text-align: center;
+
+  ${(props) =>
+    props.tablet &&
+    css`
+      @media (max-width: 768px) {
+        font-size: ${vars.text_size_seccion_mobile};
+        line-height: 1.5;
+        text-align: justify;
+      }
+    `}
 
   b {
     color: ${vars.color_3};
