@@ -43,7 +43,6 @@ const rootReducer = (state = initialState, action) => {
     case FILTER_RECIPES:
       return filterRecipesReducer(state, action);
     case FILTER_RECIPES_BY_DIETS:
-      console.log(action.payload);
       return filterByDietsReducer(state, action);
     case GET_RECIPE_BY_ID:
       return getRecipeByIdReducer(state, action);

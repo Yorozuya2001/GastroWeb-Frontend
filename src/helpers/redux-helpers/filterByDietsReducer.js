@@ -1,7 +1,7 @@
 export const filterByDietsReducer = (state, action) => {
   if (action.payload !== "allDiets") {
     let recipesFiltered = state.recipesFiltered.filter((recipe) =>
-      recipe.diets.includes(action.payload)
+      recipe.diets?.includes(action.payload)
     );
     return {
       ...state,

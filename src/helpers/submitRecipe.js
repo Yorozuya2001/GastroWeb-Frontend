@@ -10,7 +10,7 @@ const handleSubmit = (event, myRecipe, setMessage) => {
     body: JSON.stringify(myRecipe),
   };
 
-  fetch("https://gastroweb-backend-production.up.railway.app/recipes", options)
+  fetch("http://localhost:3001/recipes", options)
     .then((response) => response.json())
     .then((responseData) => {
       if (!responseData.status) throw new Error(responseData.message);

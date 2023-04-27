@@ -71,3 +71,19 @@ export const StyledDiv = styled.div`
       }
     `}
 `;
+
+export const StyledButton = styled.button`
+  color: ${vars.color_5};
+  background-color: ${vars.color_2};
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${vars.color_4};
+  }
+`;

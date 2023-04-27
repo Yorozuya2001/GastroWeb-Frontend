@@ -54,8 +54,9 @@ const useRecipeCreator = () => {
   }, []);
 
   useEffect(() => {
-    if (message === "Your recipe has been uploaded successfully.")
+    if (message.text === "Your recipe has been uploaded successfully.") {
       dispatch(getRecipes());
+    }
   }, [message]);
 
   /* handleChange y handleSubmit se ejecutaran por medio de una callback en los manejadores de eventos onChange y

@@ -10,11 +10,8 @@ export const FILTER_RECIPES_BY_DIETS = "FILTER_RECIPES_BY_DIETS";
 export const getRecipes = () => {
   return async (dispatch) => {
     try {
-      const response = await fetch(
-        "https://gastroweb-backend-production.up.railway.app/recipes"
-      );
+      const response = await fetch("http://localhost:3001/recipes");
       const data = await response.json();
-
       dispatch({
         type: GET_RECIPES,
         payload: data,
@@ -28,9 +25,7 @@ export const getRecipes = () => {
 export const getDiets = () => {
   return async (dispatch) => {
     try {
-      const response = await fetch(
-        "https://gastroweb-backend-production.up.railway.app/diets"
-      );
+      const response = await fetch("http://localhost:3001/diets");
       const data = await response.json();
 
       dispatch({
@@ -47,7 +42,7 @@ export const searchRecipes = (recipe) => {
   return async (dispatch) => {
     try {
       const response = await fetch(
-        `https://gastroweb-backend-production.up.railway.app/recipes/name?search=${recipe}`
+        `http://localhost:3001/recipes/name?search=${recipe}`
       );
       const data = await response.json();
 
@@ -85,9 +80,7 @@ export const filterByDiets = (value) => {
 export const getRecipeById = (id) => {
   return async (dispatch) => {
     try {
-      const response = await fetch(
-        `https://gastroweb-backend-production.up.railway.app/recipes/${id}`
-      );
+      const response = await fetch(`http://localhost:3001/recipes/${id}`);
       const data = await response.json();
 
       dispatch({
