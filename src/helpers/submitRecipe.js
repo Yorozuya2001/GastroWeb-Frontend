@@ -1,3 +1,5 @@
+import { BACKEND_URL, LOCAL_URL } from "../App";
+
 /* Enviamos los datos a nuestra BD */
 const handleSubmit = (event, myRecipe, setMessage) => {
   event.preventDefault();
@@ -10,7 +12,7 @@ const handleSubmit = (event, myRecipe, setMessage) => {
     body: JSON.stringify(myRecipe),
   };
 
-  fetch("http://localhost:3001/recipes", options)
+  fetch(`${BACKEND_URL}/recipes`, options)
     .then((response) => response.json())
     .then((responseData) => {
       if (!responseData.status) throw new Error(responseData.message);

@@ -6,6 +6,10 @@ import RecipeCreator from "./components/RecipeCreator/RecipeCreator";
 import CardDetail from "./components/CardDetail/CardDetail";
 import About from "./components/About/About";
 
+export const BACKEND_URL =
+  "https://gastroweb-backend-production.up.railway.app";
+export const LOCAL_URL = "http://localhost:3001";
+
 function App() {
   let { pathname } = useLocation();
 
